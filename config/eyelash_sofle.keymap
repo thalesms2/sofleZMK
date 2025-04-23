@@ -97,8 +97,8 @@
             key-positions = <57 39>;
         };
 
-        configLayer {
-            bindings = <&sl 4>;
+        SLConfig {
+            bindings = <&sl 3>;
             key-positions = <1 2 3 4 57>;
         };
     };
@@ -111,11 +111,11 @@
 
         Main {
             bindings = <
-&kp GRAVE                  &kp N1               &kp N2                   &kp N3               &kp N4                 &kp N5                   &mmv MOVE_UP     &kp N6     &kp N7                  &kp N8                &kp N9                    &kp N0                  &kp MINUS
-&kp TAB                    &kp Q                &kp W                    &kp E                &kp R                  &kp T                    &mmv MOVE_DOWN   &kp Y      &kp U                   &kp I                 &kp O                     &kp P                   &kp BSLH
-&HoldTap LEFT_CONTROL ESC  &HoldTap LEFT_ALT A  &HoldTap LEFT_CONTROL S  &HoldTap LEFT_GUI D  &HoldTap LEFT_SHIFT F  &kp G                    &mmv MOVE_LEFT   &kp H      &HoldTap RIGHT_SHIFT J  &HoldTap RIGHT_GUI K  &HoldTap RIGHT_CONTROL L  &HoldTap LEFT_ALT SEMI  &kp APOS
-&kp LSHFT                  &kp Z                &kp X                    &kp C                &kp V                  &kp B                    &mmv MOVE_RIGHT  &kp N      &kp M                   &kp COMMA             &kp DOT                   &kp FSLH                &holdToLayer 4 ESCAPE
-&trans                     &sk LEFT_ALT         &sk LEFT_CONTROL         &sk LEFT_GUI         &holdTapLayer 1 1      &holdToLayer 2 RETURN    &mkp MB1         &kp SPACE  &kp BACKSPACE           &kp ESC               &sk RIGHT_CONTROL         &sk RIGHT_ALT
+&kp GRAVE  &kp N1        &kp N2            &kp N3        &kp N4             &kp N5                   &mmv MOVE_UP     &kp N6     &kp N7         &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q         &kp W             &kp E         &kp R              &kp T                    &mmv MOVE_DOWN   &kp Y      &kp U          &kp I      &kp O     &kp P     &kp BSLH
+&kp LCTRL  &kp A         &kp S             &kp D         &kp F              &kp G                    &mmv MOVE_LEFT   &kp H      &kp J          &kp K      &kp L     &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z         &kp X             &kp C         &kp V              &kp B                    &mmv MOVE_RIGHT  &kp N      &kp M          &kp COMMA  &kp DOT   &kp FSLH  &holdToLayer 3 EQUAL
+&trans     &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_GUI  &holdTapLayer 1 1  &holdToLayer 2 RETURN    &mkp MB1         &kp SPACE  &kp BACKSPACE  &kp ESC    &kp LBKT  &kp RBKT
             >;
 
             sensor-bindings = <&scrollH>;
@@ -124,11 +124,11 @@
 
         Support {
             bindings = <
-&kp INSERT   &kp F1        &kp F2            &kp F3        &kp F4                &kp F5       &kp UP_ARROW    &kp F6          &kp F7     &kp F8          &kp F9           &kp F10           &kp EQUAL
-&kp LS(TAB)  &kp LG(Q)     &kp LC(W)         &kp LG(E)     &kp LG(R)             &kp LA(T)    &kp DOWN_ARROW  &kp GRAVE       &kp EQUAL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp ESC      &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_SHIFT        &kp F11      &kp LEFT_ARROW  &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW    &kp RIGHT        &trans            &trans
-&trans       &kp LC(Z)     &kp LC(X)         &kp LC(C)     &HoldTap LG(V) LC(V)  &kp F12      &kp RIGHT       &kp HOME        &kp PG_DN  &kp PG_UP       &kp END          &trans            &trans
-&trans       &trans        &trans            &trans        &trans                &trans       &kp ENTER       &kp MINUS       &kp DEL    &trans          &trans           &trans
+&kp INSERT        &kp F1        &kp F2            &kp F3        &kp F4          &kp F5       &kp UP_ARROW    &kp F6          &kp F7     &kp F8            &kp F9             &kp F10          &trans
+&kp LS(TAB)       &kp LG(Q)     &kp LC(W)         &kp LG(E)     &kp LG(R)       &kp LA(T)    &kp DOWN_ARROW  &kp GRAVE       &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans           &trans
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp F11      &kp LEFT_ARROW  &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW      &kp RIGHT          &kp MINUS        &trans
+&kp LEFT_SHIFT    &kp LC(Z)     &kp LC(X)         &kp LC(C)     &kp LC(V)       &kp F12      &kp RIGHT       &kp HOME        &kp PG_DN  &kp PG_UP         &kp END            &trans           &trans
+&trans            &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &trans          &trans       &kp ENTER       &kp LC(SPACE)   &kp DEL    &kp ENTER         &kp LEFT_BRACE     &kp RIGHT_BRACE
             >;
 
             display-name = "2";
@@ -147,30 +147,17 @@
             label = "3";
         };
 
-        Gaming {
-            display-name = "4";
-            bindings = <
-&kp GRAVE         &kp N1        &kp N2            &kp N3        &kp N4    &kp N5       &mmv MOVE_UP     &kp N6     &kp N7         &kp N8     &kp N9             &kp N0         &kp MINUS
-&kp TAB           &kp Q         &kp W             &kp E         &kp R     &kp T        &mmv MOVE_DOWN   &kp Y      &kp U          &kp I      &kp O              &kp P          &kp BSLH
-&kp LEFT_SHIFT    &kp A         &kp S             &kp D         &kp F     &kp G        &mmv MOVE_LEFT   &kp H      &kp J          &kp K      &kp L              &kp SEMI       &kp APOS
-&kp LEFT_CONTROL  &kp Z         &kp X             &kp C         &kp V     &kp B        &mmv MOVE_RIGHT  &kp N      &kp M          &kp COMMA  &kp DOT            &kp FSLH       &holdToLayer 4 ESCAPE
-&trans            &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_GUI  &kp LALT  &kp SPACE    &mkp MB1         &kp ENTER  &kp BACKSPACE  &kp ESC    &sk RIGHT_CONTROL  &sk RIGHT_ALT
-            >;
-
-            sensor-bindings = <&scrollH>;
-        };
-
         Config {
             bindings = <
 &sys_reset  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &rgb_ug RGB_HUI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG
 &trans      &out OUT_BLE  &out OUT_USB  &trans        &bt BT_CLR    &bt BT_CLR_ALL    &rgb_ug RGB_HUD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &trans
 &trans      &trans        &trans        &trans        &trans        &trans            &rgb_ug RGB_SAI  &trans           &trans           &trans           &trans           &trans           &trans
 &trans      &trans        &trans        &trans        &trans        &bootloader       &rgb_ug RGB_SAD  &bootloader      &trans           &trans           &trans           &trans           &trans
-&kp K_MUTE  &to 0         &to 3         &trans        &trans        &soft_off         &rgb_ug RGB_TOG  &trans           &trans           &trans           &rgb_ug RGB_ON   &rgb_ug RGB_OFF
+&kp K_MUTE  &trans        &trans        &trans        &trans        &soft_off         &rgb_ug RGB_TOG  &trans           &trans           &trans           &rgb_ug RGB_ON   &rgb_ug RGB_OFF
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            label = "5";
+            label = "0";
         };
     };
 };
