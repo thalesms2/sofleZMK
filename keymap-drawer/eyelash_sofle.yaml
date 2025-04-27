@@ -53,16 +53,16 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '=', h: '0', s: +}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:apple-keyboard-option$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:apple-keyboard-control$$', h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:gesture-tap-hold$$'}
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:keyboard-esc$$
   - {t: '2', h: '2'}
-  - {t: RETURN, h: '3'}
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - '&mkp MB1'
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:keyboard-esc$$
+  - {t: '=', s: +}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   '2':
@@ -249,8 +249,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - MUTE
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '1', h: toggle}
+  - {t: '1', h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '&soft_off', type: held alternate}
